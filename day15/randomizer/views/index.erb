@@ -1,0 +1,24 @@
+<h1>Team Randomizer</h1>
+
+<form action="/acquire_team" method="post">
+  <textarea name="teams" rows="10" cols="80"><%= session[:teams_string] %></textarea><br>
+  <!-- <label>People per group</label><input name="people_per_group" />
+  <label>Number of teams</label><input name="number_of_teams" /> -->
+  <input type="radio" name="team_type" value="num_of_teams" /><label>num of teams</label>
+  <input type="radio" name="team_type" value="people_per_group" /><label>people_per_group</label><br />
+  <input name="num" />
+
+  <input type="submit" value="Randomize!"><br />
+  <% if session[:result] != nil && session[:result].class != String %>
+    <% (1..session[:result].length).each do |number| %>
+      <div class="teams">
+        <%= number %><br>
+        <% session[:result][number - 1].each do |name| %>
+          <%= name %><br>
+        <% end %>
+      </div>
+    <% end %>
+  <% else %>
+  <div><%= session[:result] %></div>
+  <% end %>
+</form>

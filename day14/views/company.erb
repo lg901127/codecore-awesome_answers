@@ -1,0 +1,13 @@
+<h2>Generate Company Catch Phrases</h2>
+<!-- action & method -->
+<!-- action is URL
+method is HTTP Verb (GET/POST) -->
+<form action="/company" method="post">
+  <input type="text" name="first_name" placeholder="First Name"><br>
+  <input type="text" name="last_name" placeholder="Last Name"><br>
+  <input type="email" name="email" placeholder="Email"><br>
+  <input type="submit" value="Subscribe!">
+</form>
+
+<%= @company_name || "company name" %><br>
+<%= @address || "Phrase goes here..."%>

@@ -1,0 +1,25 @@
+<!-- <body  style="background-color: <%= @color %>"> -->
+<!-- <h1>Background Color</h1>
+
+<form action="/color_change" method="post">
+  <input type="radio" name="color" value="blue"><label>Blue</label>
+  <input type="radio" name="color" value="yellow"><label>Yellow</label>
+  <input type="radio" name="color" value="green"><label>Green</label>
+  <input type="radio" name="color" value="white"><label>White</label>
+  <input type="submit" value="Submit">
+</form>
+<p><%= @color %></p> -->
+<!-- </body> -->
+<h1>
+    <% if @language == "english" %>
+      <%= "Hello " + @name %>
+    <% elsif @language == "french" %>
+      <%= "Bonjour " + @name %>
+    <% elsif @language == "spanish" %>
+      <%= "Hola " + @name %>
+    <% else %>
+      <%= "Welcome to My Awesome Website" %>
+    <% end %>
+</h1>
+
+<a href="/language">Home</a>

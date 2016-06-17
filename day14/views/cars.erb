@@ -1,0 +1,6 @@
+<h1>Car Status</h1>
+<form action="/cars" method="post">
+  <label>Year: </label><input type="text" name="year" value="<% @year %>"><br>
+  <input type="submit" value="Submit"><br>
+  <h3><%= @status %></h3>
+</form>

@@ -1,0 +1,23 @@
+<h1>Note Saver</h1>
+
+<form action="/add" method="post">
+  <div>
+    <input name="title" value="<%= @title %>"><br>
+    <input name="content" value="<%= @content %>"><br>
+    <input type="submit" value="Submit">
+  </div>
+
+  <div>
+    <textarea rows="20" cols="80">
+      <% session[:notes].each do |note| %>
+        <%= "Title: #{note[0]}" %>
+        <%= "#{note[1]}" %>
+      <% end %>
+    </textarea>
+  </div>
+</form>
+<form action="/perform_delete" method="post">
+  <input type="hidden" name="_method" value="delete">
+  <input name="item_delete" value="<%= @item_delete %>"><br>
+  <input type="submit" value="Delete Me!">
+</form>

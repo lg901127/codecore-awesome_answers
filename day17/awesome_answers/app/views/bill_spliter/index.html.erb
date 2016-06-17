@@ -1,0 +1,10 @@
+<h1>Bill Spliter</h1>
+<%= form_tag bill_spliter_path do %>
+  <label>Amount</label><%= text_field_tag :amount %><br>
+  <label>Tax</label><%= text_field_tag :tax %><br>
+  <label>Tip</label><%= text_field_tag :tip %><br>
+  <label>Number of People</label><%= text_field_tag :num_of_people %><br>
+  <%= submit_tag "Submit" %>
+<% end %>
+
+<%= @amount_per_person %>

@@ -1,0 +1,11 @@
+<h1>Pick Random</h1>
+<form action="/random" method="post">
+  <textarea type="text" name="names" placeholder="<%= params[:names] %>" rows="10" cols="50"></textarea>
+  <input type="submit" value="Submit">
+<p>
+  <% if @winner == nil %>
+    <%= nil %>
+  <% else %>
+    <%= "The winner is 1#{@winner}1" %>
+  <% end %>
+</p>

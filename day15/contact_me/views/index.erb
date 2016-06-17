@@ -1,0 +1,61 @@
+<h1>Contact me</h1>
+<form action="/send" method="post">
+  <label>Name</label><input name="name" value="<%= @name %>"><br>
+  <label>Address</label><input name="address" value="<%= @address %>"><br>
+  <label>Department</label><input type="radio" name="department" value="sales">Sales<input type="radio" name="department" value="marketing">Marketing<input type="radio" name="department" value="technical">Technical<br>
+  <label>Message</label><textarea rows="5" cols="50" name="message"></textarea><br>
+  <input type="submit" value="Send">
+</form>
+<h1>Display</h1>
+<div>
+  <h2>Sales</h2>
+  <table style="width:60%">
+  <tr>
+    <th>Name</th>
+    <th>Address</th>
+    <th>Message</th>
+  </tr>
+    <% $session.each do |info| %>
+  <tr>
+    <td><%= info[0] if info[2] == "sales" %></td>
+    <td><%= info[1] if info[2] == "sales" %></td>
+    <td><%= info[3] if info[2] == "sales" %></td>
+  </tr>
+    <% end %>
+</table>
+</div>
+<div>
+  <h2>Marketing</h2>
+  <table style="width:60%">
+  <tr>
+    <th>Name</th>
+    <th>Address</th>
+    <th>Message</th>
+  </tr>
+  <% $session.each do |info| %>
+  <tr>
+    <td><%= info[0] if info[2] == "marketing" %></td>
+    <td><%= info[1] if info[2] == "marketing" %></td>
+    <td><%= info[3] if info[2] == "marketing" %></td>
+
+  </tr>
+  <% end %>
+</table>
+</div>
+<div>
+  <h2>Technical</h2>
+  <table style="width:60%">
+  <tr>
+    <th>Name</th>
+    <th>Address</th>
+    <th>Message</th>
+  </tr>
+  <% $session.each do |info| %>
+  <tr>
+    <td><%= info[0] if info[2] == "technical" %></td>
+    <td><%= info[1] if info[2] == "technical" %></td>
+    <td><%= info[3] if info[2] == "technical" %></td>
+  </tr>
+  <% end %>
+</table>
+</div>

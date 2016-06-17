@@ -1,0 +1,11 @@
+---
+1: !ruby/object:Student
+  name: lee
+  email: lg9-1127@gma.i
+  courses:
+    math: a
+2: !ruby/object:Student
+  name: aaa
+  email: aaa.com
+  courses:
+    englis: a

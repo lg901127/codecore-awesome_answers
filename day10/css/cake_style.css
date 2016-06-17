@@ -1,0 +1,24 @@
+body {
+  background-color: lightgrey;
+}
+#container {
+  border: 5px blue dashed;
+  border-radius: 20px;
+}
+#title {
+  color: green;
+  text-align: center;
+
+}
+img {
+  width: 500px;
+  border: 1px blue dashed;
+  margin: auto;
+}
+#img {
+  align-self: center;
+
+}
+#ingredients {
+  text-align: inherit;
+}

@@ -1,0 +1,21 @@
+<h1>Calculator</h1>
+<form action="/calculator" method="post">
+  <!-- <input type="text" name="plus_1" value="<%= @plus_1 %>"> + <input type="text" name="plus_2" value="<%= @plus_2 %>"> = <%= @plus_result %><br>
+  <input type="text" name="minus_1" value="<%= @minus_1 %>"> - <input type="text" name="minus_2" value="<%= @minus_2 %>"> = <%= @minus_result %><br>
+  <input type="text" name="mul_1" value="<%= @mul_1 %>"> X <input type="text" name="mul_2" value="<%= @mul_2 %>"> = <%= @mul_result %><br>
+  <input type="text" name="div_1" value="<%= @div_1 %>"> / <input type="text" name="div_2" value="<%= @div_2 %>"> = <%= @div_result %><br> -->
+  <input type="text" name="value_1" value="<%= @value_1 %>">
+  <select name="marks">
+    <option value="plus"> + </option>
+    <option value="minus" > - </option>
+    <option value="multiply" > x </option>
+    <option value="divide" > / </option>
+  </select>
+  <input type="text" name="value_2" value="<%= @value_2 %>"> = <%= @result %><br>
+  <input type="submit" value="Calculate" style="background-color: lightgreen; border-radius: 5px; color: maroon;">
+  <textarea rows=<%= $results.length %> cols="50">
+    <% $results.each do |item| %>
+      <%= item %>
+    <% end %>
+  </textarea>
+</form>

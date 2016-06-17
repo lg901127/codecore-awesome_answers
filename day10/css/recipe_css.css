@@ -1,0 +1,29 @@
+body {
+  font-family: cursive;
+  font-size: 25px;
+  background-color: #00eeaa;
+  color: white;
+}
+h1 {
+  color: darkgreen;
+}
+
+#ingredients {
+  color: green;
+}
+.i {
+  background-color: yellow;
+
+}
+img.food {
+  margin: 10px 20px 30px 40px
+  padding: 100px;
+  border: 10px green dashed;
+  border-radius: 10px;
+}
+ul li {
+  background-color: black;
+}
+ul > li {
+  background-color: gold;
+}

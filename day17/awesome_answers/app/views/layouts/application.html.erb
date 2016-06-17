@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>AwesomeAnswers</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+  <style>
+    #names {
+      width: 30%;
+      height: 100px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- <a href="<%= about_path %>">About Us</a>
+  |
+  <a href="<%= about_url %>">About Us</a> -->
+  <%# link_to is a helper method that is built-in with Rails %>
+  <%= link_to("Home", root_path) %>
+  |
+  <%= link_to("About Us", about_path, {class: "abc"}) %>
+  |
+  <a href="<%= greet_path({name: "John"}) %>">Greet John</a>
+  |
+  <a href="<%= greet_path("Tam") %>">Greet Tam</a>
+  |
+  <%= link_to("Cowsay", cowsay_path) %>
+  |
+  <%= link_to("Temp", temp_convertor_path) %>
+  |
+  <%= link_to('Bill Spliter', bill_spliter_path) %>
+  |
+  <%= link_to("Name Picker", name_picker_path) %>
+  <hr>
+
+
+<%= yield %>
+
+</body>
+</html>

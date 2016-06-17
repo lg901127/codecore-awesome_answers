@@ -1,0 +1,6 @@
+<h1>Pick a Name Yo</h1>
+<%= form_tag name_picker_path do %>
+  <%= text_area_tag :names %><br>
+  <%= submit_tag "Submit" %><br>
+<% end %>
+<h2><%= @winner %></h2>

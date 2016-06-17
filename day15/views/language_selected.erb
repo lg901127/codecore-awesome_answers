@@ -1,0 +1,13 @@
+<h1>
+    <% if session[:language] == "english" %>
+      <%= "Hello " + session[:name] %>
+    <% elsif session[:language] == "french" %>
+      <%= "Bonjour " + session[:name] %>
+    <% elsif session[:language] == "spanish" %>
+      <%= "Hola " + session[:name] %>
+    <% else %>
+      <%= "Welcome to My Awesome Website" %>
+    <% end %>
+</h1>
+
+<a href="/language">Home</a>

@@ -1,0 +1,10 @@
+<div>
+<h1>Todo List:</h1>
+</div>
+
+<textarea rows="10" cols="50">
+  <% session[:list].each do |task| %>
+    <%= task %>
+  <% end %>
+</textarea><br>
+<a href="/todo_list">Go Back</a>
